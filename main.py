@@ -10,7 +10,8 @@ cap.set(4, 480)
 cap.set(10, 150)
 
 while True:
-    success, img = cap.read()
+    # success, img = cap.read()
+    img = cv2.imread("resources/test.jpeg")
     img = cv2.resize(img,(widthImg,heightImg))
     imgContour = img.copy()
     imgThres = sf.preProcessing(img)
